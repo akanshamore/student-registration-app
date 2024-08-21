@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #2E2575;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -176,6 +176,6 @@ button[type="submit"]:hover {
         flex-direction: column;
     }
     .records {
-        order: 2; /* Move the table below the form on smaller screens */
+        order: 2; 
     }
 }
