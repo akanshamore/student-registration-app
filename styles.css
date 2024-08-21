@@ -28,32 +28,35 @@ header p {
 
 /* Main Content Styles */
 main {
+    margin-top: 20px;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Flex Container */
 .container {
     display: flex;
-    gap: 20px; /* Space between the form and the table */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px; 
 }
 
 /* Form Styles */
-#registrationForm {
-    flex: 1; /* Take equal space on larger screens */
-    min-width: 300px; /* Minimum width for the form */
+.registration-form {
+   width: 300px; 
     margin-bottom: 30px;
+
+    h2{
+        color: #333;
+    }
 }
 
-#registrationForm h2 {
-    margin-top: 0;
-    color: #333;
-}
 
 .form-row {
     margin-bottom: 15px;
@@ -66,10 +69,7 @@ label {
     color: #444;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="email"],
-input[type="tel"] {
+.input-field {
     width: 100%;
     padding: 8px;
     border: 1px solid #ddd;
@@ -78,13 +78,7 @@ input[type="tel"] {
     transition: border-color 0.3s;
 }
 
-input[type="text"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus {
-    border-color: #4CAF50;
-    outline: none;
-}
+
 
 button[type="submit"] {
     background-color: #4CAF50;
@@ -105,13 +99,14 @@ button[type="submit"]:hover {
 .records {
     flex: 2; /* Take more space for the table */
     min-width: 400px; /* Minimum width for the table */
+    h2 {
+        margin-top: 0;
+        font-size: 1.8rem;
+        color: #333;
+    }
+    
 }
 
-.records h2 {
-    margin-top: 0;
-    font-size: 1.8rem;
-    color: #333;
-}
 
 /* Table Styles */
 #studentsTable {
