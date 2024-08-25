@@ -13,17 +13,18 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-}
 
-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
+    p {
+        margin: 5px 0 0;
+        font-size: 1.1rem;
+        font-size: 16px;
+    }
 
-header p {
-    margin: 5px 0 0;
-    font-size: 1.1rem;
-    font-size: 16px;
+    h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+
 }
 
 /* Main Content Styles */
@@ -34,7 +35,7 @@ main {
     margin: 0 auto;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,15 +45,15 @@ main {
 /* Flex Container */
 .container {
     display: flex;
-    gap: 20px; 
+    gap: 20px;
 }
 
 /* Form Styles */
 .registration-form {
-   width: 300px; 
+    width: 300px;
     margin-bottom: 30px;
 
-    h2{
+    h2 {
         color: #333;
     }
 }
@@ -97,81 +98,100 @@ button[type="submit"]:hover {
 
 /* Records Section */
 .records {
-    flex: 2; /* Take more space for the table */
-    min-width: 400px; /* Minimum width for the table */
+    flex: 2;
+    /* Take more space for the table */
+    min-width: 400px;
+
+    /* Minimum width for the table */
     h2 {
         margin-top: 0;
         font-size: 1.8rem;
         color: #333;
     }
-    
+
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+
+        thead {
+            background-color: pink;
+        }
+
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e9e9e9;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+
+
+    }
+
+    .edit {
+        color: #ffff;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        text-decoration: none;
+        background-color: #ffc107;
+        margin-right: 5px;
+
+        &:hover {
+            background-color: #ffca2c;
+
+        }
+    }
+
+
+    .delete {
+        color: #ffff;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        text-decoration: none;
+        background-color: #e3342f;
+
+        &:hover {
+            background-color: #f55d4b;
+
+        }
+    }
+
+
+
 }
 
 
-/* Table Styles */
-#studentsTable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
 
-#studentsTable thead {
-    background-color: #f2f2f2;
-}
 
-#studentsTable th,
-#studentsTable td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-
-#studentsTable th {
-    background-color: #e9e9e9;
-    font-weight: bold;
-}
-
-#studentsTable tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-#studentsTable tr:hover {
-    background-color: #f1f1f1;
-}
-
-#studentsTable td .edit,
-#studentsTable td .delete {
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-#studentsTable td .edit {
-    background-color: #ffc107;
-    margin-right: 5px;
-}
-
-#studentsTable td .edit:hover {
-    background-color: #ffca2c;
-}
-
-#studentsTable td .delete {
-    background-color: #e3342f;
-}
-
-#studentsTable td .delete:hover {
-    background-color: #f55d4b;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
+
+    .registration-form {
+        width: 100%;
+    }
+
     .records {
-        order: 2; 
+        order: 2;
     }
 }
